@@ -1,0 +1,455 @@
+@charset "UTF-8";
+
+/*===== common===== */
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary--font--black: #000;
+  --primary--background--blue: #fbfeff;
+  --primary--background--white: #fff;
+
+  --primary--font-size-pc-oomidashi: 3rem;
+  --primary--font-size-pc-nakamidashi: 2rem;
+  --primary--font-size-pc-text: 1.6rem;
+  --primary--font-size-sp-oomidashi: 2.4rem;
+  --primary--font-size-sp-nakamidashi: 2rem;
+  --primary--font-size-sp-text: 1.4rem;
+}
+
+body {
+  font-family: "Noto sans JP", Arial, Helvetica, sans-serif;
+  font-size: var(--primary--font-size-sp-text);
+  color: var(--primary--font--black);
+  background-color: var(--primary--background--white);
+  line-height: 1.8;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    font-size: var(--primary--font-size-pc-text);
+  }
+
+  .spBr {
+    display: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*===== header===== */
+
+.first-view-area {
+  background-image: url(../image/pf-background-greenandblue-60p.png);
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+.taz-title-wrapper {
+  padding-left: 30px;
+  padding-top: 55px;
+}
+
+.taz-title {
+  font-size: var(--primary--font-size-sp-text);
+  font-weight: 500;
+}
+
+.pc-nav__list {
+  display: none;
+}
+
+.sp-menu-btn {
+  display: block;
+  width: 2.7rem;
+  height: 1.65rem;
+  cursor: pointer;
+  position: absolute;
+  top: 5.3rem;
+  right: 4.5rem;
+}
+
+/* nav 初期表示 */
+.sp-menu {
+  background: url(../image/pf-background-greenandblue-60p.png);
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform 0.4s;
+}
+
+.sp-menu-close {
+  position: absolute;
+  top: 60px;
+  right: 45px;
+}
+
+.sp-menu-nav {
+  margin: 142px 35.2%;
+}
+
+.sp-menu-nav ul li {
+  margin-bottom: 50px;
+}
+
+.sp-menu-item {
+  font-size: var(--primary--font-size-sp-nakamidashi);
+}
+
+/* nav active表示 */
+.sp-menu.active {
+  transform: translateX(0);
+}
+
+/* header pc*/
+
+@media screen and (min-width: 769px) {
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .taz-title {
+    font-size: var(--primary--pc-nakamidashi);
+  }
+
+  .pc-nav__list {
+    display: flex;
+    padding-top: 60px;
+    padding-right: 40px;
+    justify-content: flex-end;
+  }
+
+  .sp-menu-btn,
+  .sp-menu {
+    display: none;
+  }
+
+  .pc-menu-item {
+    padding-left: 60px;
+  }
+
+  .pc-menu-item a {
+    font-size: var(--primary--font-size-pc-text);
+  }
+}
+
+/*===== first view===== */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__container {
+  text-align: center;
+}
+
+.hero__name {
+  font-family: Merriweather;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.hero__job,
+.hero__portfolio {
+  font-family: Merriweather;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* first-view pc*/
+
+@media screen and (min-width: 769px) {
+  .hero__name {
+    font-size: 4.8rem;
+  }
+
+  .hero__job,
+  .hero__portfolio {
+    font-size: 4rem;
+    margin-top: 1rem;
+  }
+}
+
+/*===== works===== */
+
+.works__title {
+  font-size: var(--primary--font-size-sp-oomidashi);
+  font-weight: 700;
+  margin: 6.5rem auto 8rem;
+  text-align: center;
+}
+
+.work-card-img {
+  width: 85%;
+  aspect-ratio: 350/195;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.work-card__title {
+  text-align: center;
+  font-size: var(--primary--font-size-sp-nakamidashi);
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.works__item {
+  margin-bottom: 7rem;
+}
+
+.work-card__text {
+  text-align: center;
+}
+
+/* リンク部分　アニメーション */
+.work-card-img__cover {
+  overflow: hidden;
+}
+
+.work-card-img {
+  transition: transform 0.3s ease;
+}
+
+.works__item a:hover .work-card-img {
+  transform: scale(1.1);
+}
+
+/* works pc*/
+@media screen and (min-width: 769px) {
+  .works__title {
+    font-size: var(--primary--font-size-pc-oomidashi);
+    margin: 14.3rem auto 9rem;
+  }
+
+  .works__cover {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 895px;
+    margin: 0 auto;
+  }
+
+  .works__item {
+    flex: 1 1 calc(50%);
+  }
+
+  .work-card-img {
+    width: 80%;
+  }
+
+  .work-card__title {
+    font-size: var(--primary--font-size-pc-nakamidashi);
+  }
+}
+
+/*===== About me===== */
+.about-footer__background {
+  background-image: url("../image/pf-background-aboutme-40p.png");
+  background-size: cover;
+}
+
+.about__title {
+  font-size: var(--primary--font-size-sp-oomidashi);
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 6.5rem 0 10rem;
+  text-align: center;
+}
+
+.about__name {
+  text-align: center;
+  font-size: var(--primary--font-size-sp-nakamidashi);
+  font-weight: 500;
+  margin-top: 3.5rem;
+  line-height: 1;
+}
+
+.about__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 200px;
+  aspect-ratio: 247/224;
+  border-radius: 30%;
+  margin: 0 auto;
+}
+
+.about__text {
+  padding: 3.5rem 11.4%;
+}
+
+.skills__title {
+  text-align: center;
+  font-size: var(--primary--font-size-sp-oomidashi);
+  font-weight: 700;
+  margin-top: 13rem;
+}
+
+.skills__item {
+  background-color: var(--primary--background--white);
+  margin: 5.5rem 7.5%;
+}
+
+.skills__item img {
+  width: 10rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-top: 5.5rem;
+}
+
+.skills__name {
+  text-align: center;
+  font-size: var(--primary--font-size-sp-nakamidashi);
+  font-weight: 700;
+}
+
+.about__name-pc-only {
+  display: none;
+}
+
+.skills__text {
+  padding: 3.5rem 4.6%;
+}
+
+.skills__tool,
+.skills__tool-item {
+  text-align: center;
+  padding: 0 4.6%;
+}
+
+.skills__tool-item {
+  padding-bottom: 5.5rem;
+  word-break: keep-all; /* 単語はできるだけ崩さない */
+  overflow-wrap: anywhere; /* 必要なら区切る */
+}
+
+/* about me pc*/
+@media screen and (min-width: 769px) {
+  .about__title {
+    font-size: var(--primary--font-size-pc-oomidashi);
+    font-weight: 700;
+  }
+
+  .about__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8.5%;
+  }
+
+  .about__name {
+    font-size: var(--primary--font-size-pc-nakamidashi);
+  }
+
+  .about__photo {
+    width: 35%;
+  }
+
+  .about__photo img {
+    width: 100%;
+    max-width: none;
+  }
+
+  .about__info {
+    width: 55%;
+  }
+
+  .about__text {
+    margin-top: 6.5rem;
+    padding: 0;
+  }
+
+  .about__name-pc-only {
+    display: inline;
+  }
+
+  .skills__title {
+    font-size: var(--primary--font-size-pc-oomidashi);
+    font-weight: 500;
+  }
+
+  .skills__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 6rem 6% 0;
+  }
+
+  .skills__item {
+    margin: 0 1rem;
+  }
+
+  .skills__item-stack {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+  }
+}
+
+/*===== Contact===== */
+.contact__title {
+  text-align: center;
+  font-size: var(--primary--font-size-sp-nakamidashi);
+  font-weight: 700;
+  margin: 10rem auto 2.5rem;
+}
+
+.contact__container a img {
+  display: block;
+  margin: 0 auto;
+}
+
+.copy {
+  text-align: center;
+}
+
+.copy small {
+  display: block;
+  margin: 0 auto;
+  padding: 10rem 0 3rem;
+  font-size: var(--primary--font-size-sp-text);
+}
+
+.pc-footer-nav__list {
+  display: none;
+}
+
+/* contact pc*/
+@media screen and (min-width: 769px) {
+  .contact__title {
+    font-size: var(--primary--font-size-pc-oomidashi);
+    margin: 11rem auto 2.5rem;
+  }
+
+  .pc-footer-nav__list {
+    display: flex;
+    padding-top: 60px;
+    justify-content: center;
+  }
+
+  .copy small {
+    font-size: var(--primary--font-size-pc-text);
+    font-weight: 400;
+    padding: 5rem 0 3rem;
+  }
+}
