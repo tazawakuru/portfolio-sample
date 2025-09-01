@@ -33,6 +33,7 @@ body {
   font-weight: 700;
   color: blue;
   text-decoration: underline;
+  overflow-wrap: break-word;
 }
 
 .portfolio__site-image {
