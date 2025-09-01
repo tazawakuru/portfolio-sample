@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+/* ===== common ===== */
+body {
+  background-color: var(--primary--background--blue);
+}
+
+/* ===== header ===== */
+.sp-menu {
+  background-color: var(--primary--background--blue);
+  background-image: none;
+}
+
+/* ===== main ===== */
+.sugutabe__site-head {
+  margin: 17.5rem auto 10rem;
+}
+
+.sugutabe__site-title {
+  text-align: center;
+  font-size: var(--primary--font-size-sp-oomidashi);
+  font-weight: 700;
+  padding: 1.7rem 0;
+}
+
+.sugutabe__site-url {
+  text-align: center;
+  font-size: var(--primary--font-size-sp-nakamidashi);
+  font-weight: 700;
+}
+
+.sugutabe__site-url a {
+  font-weight: 700;
+  color: blue;
+  text-decoration: underline;
+  overflow-wrap: break-word;
+}
+
+.sugutabe__site-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.site-work {
+  margin: 0 7.2%;
+}
+
+.site-work__item {
+  margin-top: 3.5rem;
+}
+
+.site-work__title {
+  font-weight: 500;
+}
+
+.site-work__duration {
+  margin-top: 0.5rem;
+}
+
+.site-work__duration--list {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+.site-work__period {
+  margin-top: 0.5rem;
+}
+
+.site-work__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.25rem 0;
+  max-width: 320px;
+}
+
+.site-work__days {
+  min-width: 5.5em;
+}
+
+.site-work__text {
+  margin: 5rem 0;
+}
+
+.sugutabe-coding__container {
+  margin: 0 7.2%;
+}
+
+.sugutabe-coding__title {
+  font-size: var(--primary--font-size-sp-nakamidashi);
+  font-weight: 700;
+  text-align: center;
+  padding: 12.8rem 0 9rem;
+}
+
+.sugutabe-coding__list {
+  margin: 0 7.4%;
+}
+
+.sugutabe-coding__item {
+  margin-top: 6rem;
+}
+
+.sugutabe-coding__item img {
+  border: 1px solid #000;
+}
+
+.sugutabe-coding__item p {
+  margin-top: 2rem;
+}
+
+.sugutabe-coding__item--list {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+/* ===== PC ===== */
+@media screen and (min-width: 769px) {
+  .sugutabe__site-title {
+    font-size: var(--primary--font-size-pc-oomidashi);
+    font-weight: 700;
+    padding: 1.7rem 0;
+  }
+
+  .sugutabe__site-url {
+    font-size: var(--primary--font-size-pc-nakamidashi);
+  }
+
+  .site-work {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .site-work__title {
+    font-size: var(--primary--font-size-pc-nakamidashi);
+    flex: 0 0 200px;
+  }
+
+  .site-work__row {
+    gap: 2rem;
+  }
+
+  .site-work__item {
+    display: flex;
+    column-gap: 3rem;
+    align-items: start;
+  }
+
+  .sugutabe-coding__container {
+    max-width: 886px;
+    padding-bottom: 8rem;
+    margin: 0 auto;
+  }
+
+  .sugutabe-coding__title {
+    font-size: var(--primary--font-size-pc-nakamidashi);
+    font-weight: 700;
+    padding: 18rem 0 6rem;
+  }
+
+  .sugutabe-coding__list {
+    margin: 0 14%;
+  }
+
+  .sugutabe-coding__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6rem;
+  }
+}

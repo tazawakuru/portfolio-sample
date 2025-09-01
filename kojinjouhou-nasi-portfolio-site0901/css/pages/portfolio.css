@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+/* ===== common ===== */
+body {
+  background-color: var(--primary--background--blue);
+}
+
+/* ===== header ===== */
+.sp-menu {
+  background-color: var(--primary--background--blue);
+  background-image: none;
+}
+
+/* ===== main ===== */
+.portfolio__site-head {
+  margin: 17.5rem auto 10rem;
+}
+
+.portfolio__site-title {
+  text-align: center;
+  font-size: var(--primary--font-size-sp-oomidashi);
+  font-weight: 700;
+  padding: 1.7rem 0;
+}
+
+.portfolio__site-url {
+  text-align: center;
+  font-size: var(--primary--font-size-sp-nakamidashi);
+  font-weight: 700;
+}
+
+.portfolio__site-url a {
+  font-weight: 700;
+  color: blue;
+  text-decoration: underline;
+}
+
+.portfolio__site-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.site-work {
+  margin: 0 7.2%;
+}
+
+.site-work__item {
+  margin-top: 3.5rem;
+}
+
+.site-work__title {
+  font-weight: 500;
+}
+
+.site-work__duration {
+  margin-top: 0.5rem;
+}
+
+.site-work__period {
+  margin-top: 0.5rem;
+}
+
+.site-work__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.25rem 0;
+  max-width: 320px;
+}
+
+.site-work__days {
+  min-width: 5.5em;
+}
+
+.site-work__text {
+  margin: 5rem 0;
+}
+
+.portfolio-coding__container {
+  margin: 0 7.2%;
+}
+
+.portfolio-coding__title {
+  font-size: var(--primary--font-size-sp-nakamidashi);
+  font-weight: 700;
+  text-align: center;
+  padding: 12.8rem 0 9rem;
+}
+
+.portfolio-coding__list {
+  margin: 0 7.4%;
+}
+
+.portfolio-coding__item {
+  margin-top: 6rem;
+}
+
+.portfolio-coding__item img {
+  border: 1px solid #000;
+}
+
+.portfolio-coding__item p {
+  margin-top: 2rem;
+}
+
+/* ===== PC ===== */
+@media screen and (min-width: 769px) {
+  .portfolio__site-title {
+    font-size: var(--primary--font-size-pc-oomidashi);
+    font-weight: 700;
+    padding: 1.7rem 0;
+  }
+
+  .portfolio__site-url {
+    font-size: var(--primary--font-size-pc-nakamidashi);
+  }
+
+  .site-work {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+
+  .site-work__title {
+    font-size: var(--primary--font-size-pc-nakamidashi);
+    flex: 0 0 200px;
+  }
+
+  .site-work__row {
+    gap: 2rem;
+  }
+
+  .site-work__item {
+    display: flex;
+    column-gap: 3rem;
+    align-items: start;
+  }
+
+  .portfolio-coding__container {
+    max-width: 886px;
+    padding-bottom: 8rem;
+    margin: 0 auto;
+  }
+
+  .doubutsu-coding__title {
+    font-size: var(--primary--font-size-pc-nakamidashi);
+    font-weight: 700;
+    padding: 18rem 0 6rem;
+  }
+
+  .doubutsu-coding__list {
+    margin: 0 14%;
+  }
+
+  .doubutsu-coding__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6rem;
+  }
+}
